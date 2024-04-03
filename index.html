@@ -1,18 +1,21 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <!-- start Quiz button -->
-    <div id="main">
-        <button>Начать тест</button>
-    </div>
+    <div class="container">
+        <!-- start Quiz button -->
+    <div class="start_btn"><button>Начать</button></div>
+
     <!-- Info Box -->
-    <div id="info_box">
+    <div class="info_box">
         <div class="info-title"><span>Правила прохождения теста</span></div>
         <div class="info-list">
             <div class="info">1. На каждый вопрос у вас будет всего <span>15 секунд</span>.</div>
@@ -27,7 +30,58 @@
         </div>
     </div>
 
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Основа сотовой сети</div>
+            <div class="timer">
+                <div class="time_left_txt"></div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
 
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Cледующий</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Вы прошли тест!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Повторить</button>
+            <button class="quit close_button">Закрыть</button>
+        </div>
+    </div>
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="js/questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/script.js"></script>
+    </div>
+    
 
 </body>
 </html>
