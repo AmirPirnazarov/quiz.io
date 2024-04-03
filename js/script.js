@@ -1,4 +1,5 @@
 //selecting all required elements
+let tg = window.Telegram.WebApp
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -10,9 +11,8 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const closeButton = document.querySelector(".close_button");
-let tg = window.Telegram.WebApp
-let close = document.getElementById("close")
-
+let close = document.getElementById("close");
+tg.expand();
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
@@ -44,6 +44,10 @@ let widthValue = 0;
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
+close.addEventListener("click", () => { 
+    tg.close();
+})
+
 // if restartQuiz button clicked
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -63,10 +67,10 @@ restart_quiz.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
 }
 
-close.addEventListener("click", () => {
+// if quitQuiz button clicked
+quit_quiz.onclick = ()=>{
     window.location.reload(); //reload the current window
-    tg.close();
-})
+}
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
@@ -216,3 +220,10 @@ function queCounter(index){
     let totalQueCounTag = '<span><p>'+ index +'</p> из <p>'+ questions.length +'</p> Вопросов</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
+
+closeButton.addEventListener("click", function() {
+    // Закрываем окно или выполняем другие действия при нажатии на кнопку
+    // Например, можно закрыть модальное окно или перенаправить пользователя на другую страницу
+    // В данном случае, давайте просто закроем текущее окно
+    window.close();
+});

@@ -28,7 +28,7 @@
             <div class="info">5. Вы получите баллы на основе правильных ответов.</div>
         </div>
         <div class="buttons">
-            <button id = "close" class="quit">Закрыть</button>
+            <button id="close" class="quit">Закрыть</button>
             <button class="restart">Продолжить</button>
         </div>
     </div>
@@ -72,36 +72,15 @@
         </div>
         <div class="buttons">
             <button class="restart">Повторить</button>
-            <button id ="close" class="quit close_button">Закрыть</button>
+            <button id="close" class="quit close_button">Закрыть</button>
         </div>
-    </div>
+    </div>  
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="js/questions.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <!-- <script src="js/script.js"></script>-->
-
-    <script>
-        let tg = window.Telegram.WebApp
-        let close = document.getElementById("close");
-        let start_btn = document.getElementById("start_btn");
-        let info_box = document.getElementById("info_box");
-        tg.expand();
-
-        
-        start_btn.addEventListener("click", () => {
-            document.getElementById("info_box").style.opacity = "1";
-        })
-
-        close.addEventListener("click", () => { 
-            document.getElementById("info_box").style.opacity = "0";
-            tg.close();
-        })
-
-        
-
-    </script>
+    <script src="js/script.js"></script>
     </div>
     
 
