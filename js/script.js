@@ -12,6 +12,7 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const closeButton = document.querySelector(".close_button");
 let close = document.getElementById("close");
+const closeResultButton = document.getElementById("close_result");
 tg.expand();
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -47,6 +48,13 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 close.addEventListener("click", () => { 
     tg.close();
 })
+closeResultButton.addEventListener("click", function() {
+    // Закрываем окно или выполняем другие действия при нажатии на кнопку
+    // Например, можно закрыть модальное окно или перенаправить пользователя на другую страницу
+    // В данном случае, давайте просто закроем текущее окно
+    window.close();
+    tg.close();
+});
 
 // if restartQuiz button clicked
 restart_quiz.onclick = ()=>{
