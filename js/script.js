@@ -65,6 +65,7 @@ restart_quiz.onclick = ()=>{
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
     window.location.reload(); //reload the current window
+    tg.close();
 }
 
 const next_btn = document.querySelector("footer .next_btn");
@@ -215,7 +216,3 @@ function queCounter(index){
     let totalQueCounTag = '<span><p>'+ index +'</p> из <p>'+ questions.length +'</p> Вопросов</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
-
-order.addEventListener("click", () =>{
-tg.close();
-});
