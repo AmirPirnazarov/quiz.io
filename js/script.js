@@ -10,12 +10,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const closeButton = document.querySelector(".close_button");
-
 let tg = window.Telegram.WabApp
-let buy = document.getElementById("buy");
-let order = document.getElementById("order");
-
-tg.expang();
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -221,21 +216,6 @@ function queCounter(index){
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
-closeButton.addEventListener("click", function() {
-    // Закрываем окно или выполняем другие действия при нажатии на кнопку
-    // Например, можно закрыть модальное окно или перенаправить пользователя на другую страницу
-    // В данном случае, давайте просто закроем текущее окно
-    window.close();
-});
-
-
 order.addEventListener("click", () =>{
-    //let date = {
-      //  userScore: userScore,
-      //  questions.length: questions.length
-   // }
-
-    //tg.sendData(JSON.stringify(date));
-
-    tg.close();
+tg.close();
 });
