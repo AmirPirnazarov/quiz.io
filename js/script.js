@@ -63,7 +63,7 @@ restart_quiz.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
 }
 
-next.addEventListener("click", () => {
+close.addEventListener("click", () => {
     tg.close();
 })
 
