@@ -50,11 +50,6 @@ close.addEventListener("click", () => {
     window.close();
 })
 close_result.addEventListener("click", () => { 
-    let date = {
-        name = Amir,
-        asda = 454,
-    }
-    tg.sendDate(JSON.stringify(date))
     tg.close();
     window.close();
 })
