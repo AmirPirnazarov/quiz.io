@@ -62,11 +62,17 @@ restart_quiz.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
 }
 
-// if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
-    //window.location.reload(); //reload the current window
+let order = document.getElementById("close");
+
+order.addElementListener("click", () =>{
     tg.close();
-}
+});
+
+// if quitQuiz button clicked
+//quit_quiz.onclick = ()=>{
+    //window.location.reload(); //reload the current window
+    //tg.close();
+//}
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
