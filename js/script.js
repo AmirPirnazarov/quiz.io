@@ -64,6 +64,7 @@ restart_quiz.onclick = ()=>{
 }
 
 close.addEventListener("click", () => {
+    window.location.reload(); //reload the current window
     tg.close();
 })
 
