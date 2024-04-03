@@ -10,7 +10,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const closeButton = document.querySelector(".close_button");
-let tg = window.Telegram.WabApp
+const tg = window.Telegram.WabApp
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -62,17 +62,11 @@ restart_quiz.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
 }
 
-let order = document.getElementById("close");
-
-order.addElementListener("click", () =>{
-    tg.close();
-});
-
 // if quitQuiz button clicked
-//quit_quiz.onclick = ()=>{
+quit_quiz.onclick = ()=>{
     //window.location.reload(); //reload the current window
-    //tg.close();
-//}
+    tg.close();
+}
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
