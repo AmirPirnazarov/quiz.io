@@ -1,10 +1,4 @@
-let tg = window.Telegram.WebApp
-let close = document.getElementById("close")
-
-next.addEventListener("click", () => {
-    tg.close();
-})
-/*//selecting all required elements
+//selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -16,7 +10,8 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const closeButton = document.querySelector(".close_button");
-const tg = window.Telegram.WebApp
+let tg = window.Telegram.WebApp
+let close = document.getElementById("close")
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -68,12 +63,9 @@ restart_quiz.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
 }
 
-// if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
-    //window.location.reload(); //reload the current window
+next.addEventListener("click", () => {
     tg.close();
-}
-var 
+})
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
@@ -223,4 +215,3 @@ function queCounter(index){
     let totalQueCounTag = '<span><p>'+ index +'</p> из <p>'+ questions.length +'</p> Вопросов</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
-*/
